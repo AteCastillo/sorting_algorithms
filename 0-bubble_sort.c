@@ -9,22 +9,24 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	size_t c, d, swap;
+	int temp = 0, count = 0;
+	size_t i = 0;
 
-	if (array == NULL || size < 2)
-		return;
-
-	for (c = 0; c < size - 1; c++)
+	while (1)
 	{
-		for (d = 0; d < size - 1; d++)
+		count = 0;
+		for (i = 0; i < size; i++)
 		{
-			if (array[d] > array[d + 1])
+			while (array[i] > array[i + 1] && i + 1 < size)
 			{
-				swap = array[d];
-				array[d] = array[d + 1];
-				array[d + 1] = swap;
+				temp = array[i];
+				array[i] = array[i + 1];
+				array[i + 1] = temp;
 				print_array(array, size);
+				count++;
 			}
 		}
+		if (count == 0)
+			break;
 	}
 }

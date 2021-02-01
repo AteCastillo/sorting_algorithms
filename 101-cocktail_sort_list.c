@@ -1,44 +1,48 @@
 #include "sort.h"
-
 /**
- * insertion_sort_list - order a double linked
- * list using the algorithm insertion_sort
- * @list: Double linked list
+ * cocktail_sort_list - Creates a doubly linked list from an array of integers
+ * @list: head of the list
  * Return: Nothing
  */
-
-void insertion_sort_list(listint_t **list)
+void cocktail_sort_list(listint_t **list)
 {
-	listint_t *aux = NULL, *temp = NULL, *temp2 = NULL;
+	listint_t *aux = *list, *tail = NULL;
+	int count = 0;
 
 	if (!list || !(*list) || (!(*list)->next))
 		return;
-
-	aux = *list;
-
-	while (aux)
+	while (1)
 	{
-		if (aux->prev)
+		count = 0;
+		while (aux->next)
 		{
-			if (aux->prev->n > aux->n)
+			if (aux->n > aux->next->n && aux->next != NULL)
 			{
-				temp = aux;
-				temp2 = aux;
-				swap_nodes(list, aux->prev, aux);
-				aux = aux->next;
+				swap_nodes(list, aux, aux->next);
 				print_list(*list);
-				while (temp2)
-				{
-					if (temp2->n > temp->n)
-					{
-						swap_nodes(list, temp2, temp);
-						print_list(*list);
-					}
-					temp2 = temp2->prev;
-				}
+				count++;
+				aux = aux->prev;
 			}
+			if (aux->next == NULL && tail == NULL)
+			{
+				tail = aux;
+				tail = tail->prev;
+			}
+			aux = aux->next;
 		}
-		aux = aux->next;
+		while (aux->prev)
+		{
+			if (aux->n < aux->prev->n && aux->prev != NULL)
+			{
+				swap_nodes(list, aux->prev, aux);
+				print_list(*list);
+				count++;
+				aux = aux->next;
+			}
+			aux = aux->prev;
+		}
+		if (count == 0)
+			break;
 	}
 }
 

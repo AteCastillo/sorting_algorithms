@@ -40,6 +40,7 @@ int LSD(int *array, size_t size);
 int largest_int(int *array, size_t size);
 int is_in(int *array, size_t size, int num);
 void radix_sort(int *array, size_t size);
+void cocktail_sort_list(listint_t **list);
 
 
 #endif
