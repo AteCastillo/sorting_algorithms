@@ -42,7 +42,7 @@ int is_in(int *array, size_t size, int num);
 void radix_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 int max_value(int *array, size_t size);
-int count_elements_in_array(int * array, size_t size, int num);
+int count_elements_in_array(int *array, size_t size, int num);
 
 
 #endif
