@@ -9,7 +9,7 @@
 
 void selection_sort(int *array, size_t size)
 {
-	size_t i = 0, j = 0, pos = 0;
+	size_t i = 0, j = 0, position = 0;
 	int dancer = 0, count = 0;
 
 	if (array == NULL || size < 2)
@@ -24,13 +24,13 @@ void selection_sort(int *array, size_t size)
 			if (dancer > array[j])
 			{
 				dancer = array[j];
-				pos = j;
+				position = j;
 				count++;
 			}
 		}
 		if (count == 0)
 			continue;
-		array[pos] = array[i];
+		array[position] = array[i];
 		array[i] = dancer;
 		print_array(array, size);
 	}
