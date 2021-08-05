@@ -1,14 +1,18 @@
 # 0x1B. C - Sorting algorithms & Big O
 
-## Learning Objectives
+## Resources:books:
+* [Sorting algorith](https://en.wikipedia.org/wiki/Sorting_algorithm)
+* [Big-O notation](https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation)
+* [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
+* [15 sorting algorithms in 5 min](https://www.youtube.com/watch?v=kPRA0W1kECg)
 
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-General
 
-    At least four different sorting algorithms
-    What is the Big O notation, and how to evaluate the time complexity of an algorithm
-    How to select the best sorting algorithm for a given input
-    What is a stable sorting algorithm
+## Learning Objectives:bulb:
+*    At least four different sorting algorithms
+*    What is the Big O notation, and how to evaluate the time complexity of an algorithm
+*    How to select the best sorting algorithm for a given input
+*    What is a stable sorting algorith
+
 
 ## Tasks
 
